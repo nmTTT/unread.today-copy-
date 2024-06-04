@@ -138,7 +138,7 @@ a {
   }
 }
 
-.social-links {
+nav .social-links {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -663,15 +663,13 @@ section .box-left {
 }
 
 section .box {
-  /* width: 100%;
-  height: 100%; */
   background-position: center;
   background-size: cover;
   overflow: hidden;
   transition: all 0.3s;
   position: relative;
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: darken;
 }
 
@@ -774,8 +772,22 @@ section .box .text-in-box {
   bottom: 0;
   left: 0;
   color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 0 0 15px 15px;
+  padding: 10px 23px;
+  border-radius: 0 0 1.8rem 1.8rem;
+}
+
+section .box .min-in-box {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(30px);
+  position: absolute;
+  background-color: transparent;
+  z-index: 2;
+  bottom: 25%;
+  right: 5%;
+  color: #fff;
+  font-size: 14px;
+  padding: 4px 11px;
+  border-radius: 7px;
 }
 
 section .box > div {
@@ -786,19 +798,21 @@ section .box > div {
 
 section .box .text-in-box h6 {
   opacity: 0.6;
-  font-weight: 100;
+  font-weight: 400;
+  font-size: 14px;
 }
 
-section .box1 h4,
-section .box2 h4,
-section .box3 h4,
-section .box4 h4 {
-  width: 210px;
-  height: 100%;
+section .small-box h4,
+section .medium-box h4,
+section .tiny-box h4 {
+  width: 220px;
+  overflow: hidden;
+  line-height: 1.5rem;
 }
 
-section .box-big .text-in-box h4 {
+section .big-box .text-in-box h4 {
   width: 350px;
+  overflow: hidden;
 }
 
 footer {
@@ -979,6 +993,41 @@ footer .contact-btn2 {
 }
 
 .footer .social-links a {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #888888;
+  text-decoration: none;
+  transition: ease-in-out 0.3s;
+  opacity: 0.4;
+}
+
+.footer .social-links a:hover {
+  opacity: 1;
+}
+
+.footer .social-links .fb-btn:hover {
+  color: #1877f2;
+}
+
+.footer .social-links .twtr-btn:hover {
+  color: #1da1f2;
+}
+
+.footer .social-links .ig-btn:hover {
+  background: -webkit-linear-gradient(#f9ce34, #ee2a7b, #6228d7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer .social-links .lk-btn:hover {
+  color: #0077b5;
+}
+
+.footer .social-links .yt-btn:hover {
+  color: red;
+}
+
+.footer .social-links .sc-btn:hover {
+  background: -webkit-linear-gradient(#ff8800, #ff3300);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
